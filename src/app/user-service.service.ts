@@ -1,25 +1,25 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserServiceService {
 
-  constructor(private httpInstance: HttpClient) { 
+  constructor(private http : HttpClient ) { }
+  getUsers () {
+    return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
-  getUsers() {
-      return this.httpInstance.get('https://jsonplaceholder.typicode.com/users')
+  addUsers (data) {
+    return this.http.post('https://jsonplaceholder.typicode.com/users', data)
   }
-  getUser(id) {
-    return this.httpInstance.get(`https://jsonplaceholder.typicode.com/users/${id}`)
+  deleteUser(id) {
+    return this.http.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
   }
-  deleteUsers(id) {
-    return this.httpInstance.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
+  updateUser(data, id) {
+    return this.http.put(`https://jsonplaceholder.typicode.com/users/${id}`, data)
   }
-  addUser(data) {
-    return this.httpInstance.post(`https://jsonplaceholder.typicode.com/users`, data);
-  }
-  updateUser(id, data) {
-    return this.httpInstance.put(`https://jsonplaceholder.typicode.com/users/${id}`, data);
+  getUser (id) {
+    return this.http.get(`https://jsonplaceholder.typicode.com/users/${id}`);
   }
 }

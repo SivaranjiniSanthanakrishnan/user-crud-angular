@@ -1,25 +1,29 @@
+
 <div style="padding: 20px;">
     <form [formGroup]="reactiveForm" (ngSubmit)="submitReactiveForm(reactiveForm.value)">
-
-        <mat-form-field appearance="fill" class="example-full-width form-group" >
-            <mat-label>Input</mat-label>
-            <input matInput placeholder="Name" formControlName="nameReactive" name="nameReactive" class="form-control">
-        </mat-form-field> <br/>
+       
+            
+            <mat-form-field class="example-full-width form-group" appearance="fill" >
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Name" formControlName="nameReactive" name="nameReactive" class="form-control" >
+              </mat-form-field> <br/>
+    
+              <mat-form-field class="example-full-width form-group" appearance="fill" >
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="emailReactive" name="emailReactive" class="form-control" >
+              </mat-form-field> <br/>
         
-        <mat-form-field appearance="fill" class="example-full-width form-group" >
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="Email" formControlName="emailReactive" name="emailReactive" class="form-control">
-        </mat-form-field><br/>
+              <mat-form-field class="example-full-width form-group" appearance="fill" >
+                <mat-label>Phone</mat-label>
+                <input matInput placeholder="Phone" formControlName="phoneReactive" name="phoneReactive" class="form-control" >
+              </mat-form-field> <br/>
+       
+              <mat-form-field class="example-full-width form-group" appearance="fill" >
+                <mat-label>Website</mat-label>
+                <input matInput placeholder="Website" formControlName="websiteReactive" name="websiteReactive" class="form-control" >
+              </mat-form-field> <br/>
+        <button type="submit"  mat-raised-button [disabled]="reactiveForm.invalid">Submit</button>
         
-        <mat-form-field appearance="fill" class="example-full-width form-group" >
-            <mat-label>Phone</mat-label>
-            <input matInput placeholder="Phone" formControlName="phoneReactive" name="phoneReactive" class="form-control">
-        </mat-form-field><br/>
 
-        <mat-form-field appearance="fill" class="example-full-width form-group" >
-            <mat-label>Website</mat-label>
-            <input matInput placeholder="Website" formControlName="websiteReactive" name="websiteReactive" class="form-control">
-        </mat-form-field><br/>
-        <button type="submit" mat-raised-button [disabled]="reactiveForm.invalid" >Submit</button>
     </form>
-</div>
+    </div>

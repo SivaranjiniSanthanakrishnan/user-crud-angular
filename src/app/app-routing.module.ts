@@ -6,15 +6,15 @@ import { UserlistComponent } from './userlist/userlist.component';
 
 const routes: Routes = [
   {
-    path:'user',
+    path: 'user',
     component: UserlistComponent
   },
   {
-    path:'add',
+    path: 'add',
     component: AdduserComponent
   },
   {
-    path:'update/:ids',
+    path: 'update/:id',
     component: UpdateuserComponent
   }
 ];
